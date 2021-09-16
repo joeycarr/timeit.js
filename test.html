@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <script type="module">
+            import {timeit} from './timeit.js';
+
+            const sumrand = () => {
+                let sum;
+                for(let i=0; i<100000; i++) {
+                    sum += Math.random();
+                }
+                return sum;
+            }
+
+            console.log(timeit(sumrand));
+        </script>
+    </body>
+</html>
